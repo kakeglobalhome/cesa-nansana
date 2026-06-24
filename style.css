@@ -77,6 +77,11 @@ header {
   margin-right: 6px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
   display: flex;
   gap: 22px;
@@ -96,6 +101,35 @@ header {
 
 .nav-links a:hover {
   color: var(--terracotta-dark);
+}
+
+.nav-social {
+  display: flex;
+  gap: 10px;
+  margin-left: 22px;
+}
+
+.social-icon {
+  display: inline-flex;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.social-icon svg {
+  display: block;
+  border-radius: 6px;
+}
+
+.social-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 4px;
 }
 
 /* Hero */
@@ -205,6 +239,14 @@ h2 {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-grid .about-logo {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: none;
 }
 
 .about-text h2 {
@@ -325,9 +367,8 @@ h2 {
 
 .quote-block img {
   width: 180px;
-  height: 220px;
-  object-fit: contain;
-  background: var(--cream);
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
 }
@@ -667,7 +708,7 @@ footer .slogan {
   .logo-full {
     display: none;
   }
-  .nav-fb {
+  .nav-social {
     display: none;
   }
   .logo-short {
