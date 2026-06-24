@@ -11,12 +11,13 @@
 
 <header>
   <nav class="nav">
-    <a href="#top" class="logo"><img src="images/logo.jpg" alt="CeSA logo" class="logo-img"><span class="logo-full">CeSA — Centre For Special Abilities</span><span class="logo-short">CeSA</span></a>
+    <a href="#top" class="logo"><img src="images/logo.png" alt="CeSA logo" class="logo-img"><span class="logo-full">CeSA — Centre For Special Abilities</span><span class="logo-short">CeSA</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Programs</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li class="nav-fb"><a href="https://www.facebook.com/61562365375146/" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
   </nav>
 </header>
@@ -43,6 +44,21 @@
     </div>
   </div>
 
+  <div class="wrap trust-badges">
+    <div class="badge">
+      <strong>2015</strong>
+      <span>Founded, as a Community Based Organization</span>
+    </div>
+    <div class="badge">
+      <strong>Officially Registered</strong>
+      <span>CBO No. WCBO/18/1102 — Sept 2018, Wakiso District</span>
+    </div>
+    <div class="badge">
+      <strong>UN SDGs 3 · 4 · 5</strong>
+      <span>Good Health &amp; Well-Being · Quality Education · Gender Equality</span>
+    </div>
+  </div>
+
   <div class="wrap cards">
     <div class="card">
       <h3>Our Vision</h3>
@@ -52,9 +68,10 @@
       <h3>Our Mission</h3>
       <p>To promote a God-fearing, equal rights and equitable opportunities for children with special needs through assessment, rehabilitation, capacity building and advocacy.</p>
     </div>
-    <div class="card">
+    <div class="card clickable" onclick="openDetail('motto')">
       <h3>Our Motto</h3>
       <p>"Dare to be true." We act with honesty and commitment in everything we do for the children and families we serve.</p>
+      <span class="card-more">Read more →</span>
     </div>
   </div>
 
@@ -89,14 +106,14 @@
       <p>CeSA offers a range of services to support children with special needs and their families.</p>
     </div>
     <ul class="service-list">
-      <li>Assessment &amp; Counselling</li>
-      <li>Occupational Therapy</li>
-      <li>Speech &amp; Language Therapy</li>
-      <li>Behaviour Management</li>
-      <li>Community-Based Rehabilitation (CBR)</li>
-      <li>Basic Vocational Training</li>
-      <li>Staff Capacity Building</li>
-      <li>Special Classes: Nursery – P1–S4</li>
+      <li onclick="openDetail('assessment')">Assessment &amp; Counselling</li>
+      <li onclick="openDetail('ot')">Occupational Therapy</li>
+      <li onclick="openDetail('speech')">Speech &amp; Language Therapy</li>
+      <li onclick="openDetail('behaviour')">Behaviour Management</li>
+      <li onclick="openDetail('cbr')">Community-Based Rehabilitation (CBR)</li>
+      <li onclick="openDetail('vocational')">Basic Vocational Training</li>
+      <li onclick="openDetail('capacity')">Staff Capacity Building</li>
+      <li onclick="openDetail('classes')">Special Classes: Nursery – P1–S4</li>
     </ul>
     <p class="classes-note">We also promote community awareness, children's health and rights, vocational skills in agriculture, music, dance &amp; drama, and environmental conservation.</p>
   </div>
@@ -109,12 +126,12 @@
       <h2>Our School Life</h2>
     </div>
     <div class="gallery-grid">
-      <img src="images/gallery-1.jpg" alt="Children studying together at a classroom desk at CeSA">
-      <img src="images/gallery-2.jpg" alt="Students in a CeSA classroom">
-      <img src="images/gallery-3.jpg" alt="A student writing in his exercise book at CeSA">
-      <img src="images/gallery-4.jpg" alt="CeSA signboard listing services and contact information">
-      <img src="images/gallery-5.jpg" alt="Children and staff gathered outside the CeSA building">
-      <img src="images/gallery-6.jpg" alt="A classroom at CeSA with chalkboard and desks">
+      <img src="images/gallery-1.jpg" alt="Children studying together at a classroom desk at CeSA" onclick="openLightbox(0)">
+      <img src="images/gallery-2.jpg" alt="Students in a CeSA classroom" onclick="openLightbox(1)">
+      <img src="images/gallery-3.jpg" alt="A student writing in his exercise book at CeSA" onclick="openLightbox(2)">
+      <img src="images/gallery-4.jpg" alt="CeSA signboard listing services and contact information" onclick="openLightbox(3)">
+      <img src="images/gallery-5.jpg" alt="Children and staff gathered outside the CeSA building" onclick="openLightbox(4)">
+      <img src="images/gallery-6.jpg" alt="A classroom at CeSA with chalkboard and desks" onclick="openLightbox(5)">
     </div>
   </div>
 </section>
@@ -125,10 +142,6 @@
     <h2>Visit or Contact CeSA</h2>
     <div class="contact-grid">
       <div class="contact-item">
-        <div class="label">Location</div>
-        <a class="value" href="https://maps.app.goo.gl/XShxT3qjMb3fhJN29" target="_blank" rel="noopener">📍 Nansana, Wakiso, Uganda</a>
-      </div>
-      <div class="contact-item">
         <div class="label">Phone</div>
         <a href="tel:+256782604098">+256 782 604 098</a><br>
         <a href="tel:+256753067559">+256 753 067 559</a>
@@ -137,15 +150,163 @@
         <div class="label">Email</div>
         <a href="mailto:centreforspecialabilities@gmail.com">centreforspecialabilities@gmail.com</a>
       </div>
+      <div class="contact-item">
+        <div class="label">Facebook</div>
+        <a href="https://www.facebook.com/61562365375146/" target="_blank" rel="noopener">@CentreForSpecialAbilities</a>
+      </div>
     </div>
     <a href="mailto:centreforspecialabilities@gmail.com" class="btn">Email Us</a>
+
+    <div class="map-wrap">
+      <a href="https://maps.app.goo.gl/XShxT3qjMb3fhJN29" target="_blank" rel="noopener" class="map-embed" aria-label="Open Nansana, Wakiso, Uganda in Google Maps">
+        <iframe src="https://www.google.com/maps?q=Nansana,Wakiso,Uganda&output=embed" loading="lazy" tabindex="-1"></iframe>
+        <span class="map-overlay">📍 Nansana, Wakiso, Uganda — tap to open in Google Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">Stay Updated</div>
+      <h2>Latest From Our Facebook Page</h2>
+    </div>
+    <div class="fb-embed-wrap">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61562365375146%2F&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+        width="500" height="600" style="border:none;overflow:hidden;max-width:100%;" scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="slogan">"Every child matters."</div>
-  <div>Centre For Special Abilities (CeSA) — Nansana, Uganda</div>
+  <div><img src="images/logo.png" alt="CeSA logo" class="footer-logo">Centre For Special Abilities (CeSA) — Nansana, Uganda</div>
+  <div class="footer-links"><a href="https://www.facebook.com/61562365375146/" target="_blank" rel="noopener">Facebook</a></div>
 </footer>
+
+<div class="overlay" id="detail-modal">
+  <div class="modal-panel">
+    <button class="modal-close" onclick="closeDetail()">✕</button>
+    <div class="modal-media" id="detail-media"></div>
+    <h3 id="detail-title"></h3>
+    <p id="detail-text"></p>
+  </div>
+</div>
+
+<div class="overlay lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-arrow lb-prev" onclick="moveLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lb-arrow lb-next" onclick="moveLightbox(1)">›</button>
+</div>
+
+<script>
+  const SERVICE_DETAILS = {
+    motto: {
+      title: 'Our Motto — "Dare to be true"',
+      text: 'Our motto is a daily commitment: to be honest with the children and families we serve, true to our mission, and unafraid to advocate for what every child deserves.'
+    },
+    assessment: {
+      title: 'Assessment & Counselling',
+      text: 'Every child begins with a child psycho-educational assessment to understand their needs and abilities, followed by ongoing counselling for the child and their family to guide the right support plan.'
+    },
+    ot: {
+      title: 'Occupational Therapy',
+      text: 'Hands-on therapy that builds the everyday skills children need for independent living — from fine motor control to self-care routines.'
+    },
+    speech: {
+      title: 'Speech & Language Therapy',
+      text: 'Individual and group sessions that help children build communication, language and social interaction skills.'
+    },
+    behaviour: {
+      title: 'Behaviour Management',
+      text: 'Structured, positive approaches that help children regulate behaviour and build confidence, both in the classroom and at home.'
+    },
+    cbr: {
+      title: 'Community-Based Rehabilitation (CBR)',
+      text: 'We go beyond the centre — mobilising and working with families and the local Nansana community, so rehabilitation and support continue at home.'
+    },
+    vocational: {
+      title: 'Basic Vocational Training',
+      text: 'Practical skills training in affordable, manageable fields like agriculture, music, dance & drama, food preparation and home management — helping students build an independent livelihood.'
+    },
+    capacity: {
+      title: 'Staff Capacity Building',
+      text: 'Ongoing training for our teachers and therapists, and hands-on placements for students from higher institutions of learning, so CeSA can keep raising the quality of care.'
+    },
+    classes: {
+      title: 'Special Classes: Nursery – P1–S4',
+      text: 'Special needs education from Nursery through Senior 4 (S4), adapted to each child\'s pace and learning style.'
+    }
+  };
+
+  function openDetail(key) {
+    const data = SERVICE_DETAILS[key];
+    if (!data) return;
+    document.getElementById('detail-title').textContent = data.title;
+    document.getElementById('detail-text').textContent = data.text;
+    document.getElementById('detail-media').innerHTML = data.image
+      ? `<img src="${data.image}" alt="${data.title}">`
+      : '<span>📷 Photos &amp; videos coming soon</span>';
+    document.getElementById('detail-modal').classList.add('open');
+  }
+
+  function closeDetail() {
+    document.getElementById('detail-modal').classList.remove('open');
+  }
+
+  const GALLERY_IMAGES = [
+    'images/gallery-1.jpg',
+    'images/gallery-2.jpg',
+    'images/gallery-3.jpg',
+    'images/gallery-4.jpg',
+    'images/gallery-5.jpg',
+    'images/gallery-6.jpg'
+  ];
+  let lightboxIndex = 0;
+
+  function openLightbox(i) {
+    lightboxIndex = i;
+    showLightboxImage();
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  function moveLightbox(dir) {
+    lightboxIndex = (lightboxIndex + dir + GALLERY_IMAGES.length) % GALLERY_IMAGES.length;
+    showLightboxImage();
+  }
+
+  function showLightboxImage() {
+    const img = document.getElementById('lightbox-img');
+    img.classList.remove('show');
+    setTimeout(() => {
+      img.src = GALLERY_IMAGES[lightboxIndex];
+      img.classList.add('show');
+    }, 80);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (document.getElementById('lightbox').classList.contains('open')) {
+      if (e.key === 'ArrowRight') moveLightbox(1);
+      if (e.key === 'ArrowLeft') moveLightbox(-1);
+      if (e.key === 'Escape') closeLightbox();
+    }
+    if (e.key === 'Escape') closeDetail();
+  });
+
+  document.getElementById('detail-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'detail-modal') closeDetail();
+  });
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
