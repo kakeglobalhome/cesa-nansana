@@ -1423,6 +1423,24 @@ footer .slogan {
 }
 
 @media (max-width: 800px) {
+  /* Mobile dropdown */
+  .has-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  /* Principal page: stack photo above text */
+  .leadership-block {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .leadership-photo {
+    text-align: center;
+  }
+  .leadership-photo img {
+    max-width: 220px;
+    width: 220px;
+  }
+
   .nav-links {
     gap: 14px;
     font-size: 0.85rem;
@@ -1634,22 +1652,6 @@ footer .slogan {
 }
 
 /* ─── Mobile layout fixes ─── */
-@media (max-width: 800px) {
-  /* Mobile dropdown: open state via JS toggle */
-  .has-dropdown.open .dropdown-menu {
-    display: block;
-  }
-
-  /* Principal message: stack photo above text */
-  .leadership-block {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .leadership-photo img {
-    max-width: 240px;
-  }
-}
-
 @media (max-width: 800px) {
   /* Hero: adjust photo position so faces aren't cropped */
   .hero {
