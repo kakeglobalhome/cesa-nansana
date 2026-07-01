@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function (e) {
       if (!isMobile()) return;
       e.preventDefault();
+      e.stopPropagation();
       var parent = this.closest('.has-dropdown');
       var wasOpen = parent.classList.contains('open');
       document.querySelectorAll('.has-dropdown.open').forEach(function (el) {

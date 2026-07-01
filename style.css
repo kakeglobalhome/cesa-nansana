@@ -1638,14 +1638,6 @@ footer .slogan {
   /* Mobile dropdown: open state via JS toggle */
   .has-dropdown.open .dropdown-menu {
     display: block;
-    position: static;
-    transform: none;
-    box-shadow: none;
-    border-radius: 0 0 6px 6px;
-    border-top: none;
-    border-left: 3px solid var(--gold);
-    min-width: auto;
-    padding: 2px 0;
   }
 
   /* Principal message: stack photo above text */
